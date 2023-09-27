@@ -27,20 +27,15 @@
 
         // Load your GeoJSON data and add it to the map
         // Replace 'your-data.geojson' with the URL or path to your GeoJSON file
-        fetch('your-data.geojson')
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                L.geoJSON(data, {
-                    onEachFeature: function(feature, layer) {
-                        // Attach a popup with attribute information to each building polygon
-                        var popupContent = '<strong>Building Name:</strong> ' + feature.properties.name + '<br>';
-                        popupContent += '<strong>Address:</strong> ' + feature.properties.address;
-                        layer.bindPopup(popupContent);
-                    }
-                }).addTo(map);
-            });
+fetch('data.geojson')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        L.geoJSON(data, {
+            // ...
+        }).addTo(map);
+    });
     </script>
 </body>
 </html>
