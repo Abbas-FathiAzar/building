@@ -1,0 +1,38 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eiffel Tower",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [2.2945, 48.8584]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Statue of Liberty",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-74.0445, 40.6892]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Great Wall of China",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [116.4019, 40.4000]
+      }
+    }
+  ]
+}

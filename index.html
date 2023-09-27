@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Building Map</title>
+    <!-- Include Leaflet CSS and JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        /* Set the map container's size */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Create a Leaflet map centered at a specific location
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        // Add a basemap (e.g., OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Load your GeoJSON data and add it to the map
+        // Replace 'your-data.geojson' with the URL or path to your GeoJSON file
+        fetch('your-data.geojson')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                L.geoJSON(data, {
+                    onEachFeature: function(feature, layer) {
+                        // Attach a popup with attribute information to each building polygon
+                        var popupContent = '<strong>Building Name:</strong> ' + feature.properties.name + '<br>';
+                        popupContent += '<strong>Address:</strong> ' + feature.properties.address;
+                        layer.bindPopup(popupContent);
+                    }
+                }).addTo(map);
+            });
+    </script>
+</body>
+</html>
