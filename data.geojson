@@ -4,9 +4,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Genova Aquarium",
-        "type": "TaxonomyA"
-		"image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
+        "name": "Multihazard proofed",
+        "type": "TaxonomyA",
+        "image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
       },
       "geometry": {
         "type": "Point",
@@ -16,34 +16,13 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Genova Old Port",
-        "type": "TaxonomyA"
+        "name": "flood proofed",
+        "type": "TaxonomyB",
+        "image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [8.9101, 44.4077]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Piazza De Ferrari",
-        "type": "TaxonomyB"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.9385, 44.4071]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Genova Cathedral",
-        "type": "TaxonomyB"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.9381, 44.4075]
       }
     }
   ]

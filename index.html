@@ -26,22 +26,22 @@
         }).addTo(map);
 
         // Load the GeoJSON data from an external file ('data.geojson')
-fetch('data.geojson')
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(geojson) {
-        // Add the GeoJSON layer to the map
-        L.geoJSON(geojson, {
-            onEachFeature: function (feature, layer) {
-                // Create a popup with an image
-                var popupContent = '<b>' + feature.properties.name + '</b><br>';
-                popupContent += '<img src="' + feature.properties.image + '" width="200" height="150">';
-
-                layer.bindPopup(popupContent);
-            }
-        }).addTo(map);
-    });
+        fetch('data.geojson')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(geojson) {
+                // Add the GeoJSON layer to the map with image popups
+                L.geoJSON(geojson, {
+                    onEachFeature: function (feature, layer) {
+                        // Create a popup with an image
+                        var popupContent = '<b>' + feature.properties.name + '</b><br>';
+                        popupContent += '<img src="' + feature.properties.image + '" width="200" height="150">';
+    
+                        layer.bindPopup(popupContent);
+                    }
+                }).addTo(map);
+            });
     </script>
 </body>
 </html>
