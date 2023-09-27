@@ -34,8 +34,7 @@
                 // Add the GeoJSON layer to the map
                 L.geoJSON(geojson, {
                     onEachFeature: function (feature, layer) {
-                        layer.bindPopup("<b>Name:</b> " + feature.properties.name + "<br><b>Type:</b> " + feature.properties.type + "<br><b>flood BCR:</b> " + feature.properties.BCR);
-
+                        layer.bindPopup("<b>" + feature.properties.name + "</b><br>Type: " + feature.properties.type);
                     }
                 }).addTo(map);
             });
