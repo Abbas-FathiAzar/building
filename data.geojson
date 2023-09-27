@@ -5,7 +5,8 @@
       "type": "Feature",
       "properties": {
         "name": "Genova Aquarium",
-        "type": "Landmark"
+        "type": "TaxonomyA"
+		"image": "flood.png"
       },
       "geometry": {
         "type": "Point",
@@ -16,7 +17,7 @@
       "type": "Feature",
       "properties": {
         "name": "Genova Old Port",
-        "type": "Landmark"
+        "type": "TaxonomyA"
       },
       "geometry": {
         "type": "Point",
@@ -27,7 +28,7 @@
       "type": "Feature",
       "properties": {
         "name": "Piazza De Ferrari",
-        "type": "Landmark"
+        "type": "TaxonomyB"
       },
       "geometry": {
         "type": "Point",
@@ -38,7 +39,7 @@
       "type": "Feature",
       "properties": {
         "name": "Genova Cathedral",
-        "type": "Landmark"
+        "type": "TaxonomyB"
       },
       "geometry": {
         "type": "Point",
