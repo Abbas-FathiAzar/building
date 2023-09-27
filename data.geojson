@@ -6,6 +6,7 @@
       "properties": {
         "name": "Multihazard proofed",
         "type": "TaxonomyA",
+		"bcr": "one",
         "image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
       },
       "geometry": {
@@ -18,6 +19,7 @@
       "properties": {
         "name": "flood proofed",
         "type": "TaxonomyB",
+		"bcr": "five",
         "image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
       },
       "geometry": {
