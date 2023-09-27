@@ -31,14 +31,10 @@
                 return response.json();
             })
             .then(function(geojson) {
-                // Add the GeoJSON layer to the map with image popups
+                // Add the GeoJSON layer to the map
                 L.geoJSON(geojson, {
                     onEachFeature: function (feature, layer) {
-                        // Create a popup with an image
-                        var popupContent = '<b>' + feature.properties.name + '</b><br>';
-                        popupContent += '<img src="' + feature.properties.image + '" width="200" height="150">';
-    
-                        layer.bindPopup(popupContent);
+                        layer.bindPopup("<b>" + feature.properties.name + "</b><br>Type: " + feature.properties.type);
                     }
                 }).addTo(map);
             });
