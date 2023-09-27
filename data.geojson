@@ -6,7 +6,7 @@
       "properties": {
         "name": "Genova Aquarium",
         "type": "TaxonomyA"
-		"image": "flood1.jpg"
+		"image": "https://sustainablebuildingsinitiative.org/assets/components/phpthumbof/cache/Wet%20Floodproofing.822a737a14cf0adde2fb0406659a678d.png"
       },
       "geometry": {
         "type": "Point",
