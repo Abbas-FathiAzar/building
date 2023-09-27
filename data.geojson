@@ -1,0 +1,49 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Genova Aquarium",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.9452, 44.4056]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Genova Old Port",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.9101, 44.4077]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Piazza De Ferrari",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.9385, 44.4071]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Genova Cathedral",
+        "type": "Landmark"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.9381, 44.4075]
+      }
+    }
+  ]
+}
