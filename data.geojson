@@ -6,7 +6,7 @@
       "properties": {
         "name": "Genova Aquarium",
         "type": "TaxonomyA"
-		
+		"image": "flood1.jpg"
       },
       "geometry": {
         "type": "Point",
