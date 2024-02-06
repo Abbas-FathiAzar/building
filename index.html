@@ -25,25 +25,20 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Load the GeoJSON data from an external file ('data.geojson')
+        // Load the GeoJSON data from an external file ('bbb.geojson')
         fetch('bbb.geojson')
             .then(function(response) {
                 return response.json();
             })
             .then(function(geojson) {
                 // Add the GeoJSON layer to the map
-                L.geoJSON(geojson, {
-                    onEachFeature: function (feature, layer) {
-                        layer.bindPopup("<b>Name:</b> " + feature.properties.Building c + "<br><b>Type:</b> " + feature.properties.Constructi + "<br><b>AB\nSI-SLV:</b> " + feature.properties.AB\nSI-SLV);
-
-                    }
-                }).addTo(map);
+                L.geoJSON(geojson).addTo(map);
             });
     </script>
     <div id="footer">
         <h2>Building Level Integrated EQ and FL Structural Measures</h2>
         <p><strong>Disclaimer: </strong>The authors and institutions responsible for this research disclaim any liability for decisions or actions taken based on the information in this report. Users are encouraged to conduct their own assessments and consult relevant experts and authorities when making important decisions related to seismic and flood risk..</p>
-        <p>Please Reference to this work as: FathiAzar et. al., (2023), Paper Title .</p>
+        <p>Please Reference to this work as: FathiAzar. A, Cattari. S, De Angeli. S, (2023), Paper Title .</p>
         <p>For any questions or inquiries, please email me at: <a href="Fathi.Azar.Abbas@Gmail.com">Fathi.Azar.Abbas@Gmail.com</a></p>
     </div>
 
