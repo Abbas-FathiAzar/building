@@ -18,7 +18,7 @@
 
     <script>
         // Create a Leaflet map centered at Genova
-        var map = L.map('map').setView([45.9056, 13.55452], 10);
+        var map = L.map('map').setView([45.9056, 13.55452], 9);
 
         // Add a basemap (e.g., OpenStreetMap)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -26,7 +26,7 @@
         }).addTo(map);
 
         // Load the GeoJSON data from an external file ('ab.geojson')
-        fetch('ab.geojson')
+        fetch('abc.geojson')
             .then(function(response) {
                 return response.json();
             })
@@ -34,11 +34,25 @@
                 // Add the GeoJSON layer to the map
                 L.geoJSON(geojson, {
                     onEachFeature: function (feature, layer) {
-                        var popupContent = "<b>ID:</b> " + feature.properties.ID + "<br>" +
-                                           "<b>N-st:</b> " + feature.properties['N-st'] + "<br>" +
-                                           "<b>SI:</b> " + feature.properties.SI + "<br>" +
-                                           "<b>PAM:</b> " + feature.properties.PAM + "<br>" +
-                                           "<b>Intvs:</b> " + feature.properties.Intvs;
+                        var popupContent = "<b>Building Code:</b> " + feature.properties['Building c'] + "<br>" +
+                                           "<b>Number of Storeys:</b> " + feature.properties['N storey ('] + "<br>" +
+                                           "<b>Area:</b> " + feature.properties['Area (Supe'] + "<br>" +
+                                           "<b>SI-SLV-Med:</b> " + feature.properties['SI-SLV-Med'] + "<br>" +
+                                           "<b>EAL-Med:</b> " + feature.properties['EAL-Med'] + "<br>" +
+                                           "<b>SIC-Med:</b> " + feature.properties['SIC-Med'] + "<br>" +
+                                           "<b>EALC-Med:</b> " + feature.properties['EALC-Med'] + "<br>" +
+                                           "<b>Class-Med:</b> " + feature.properties['Class-Med'] + "<br>" +
+                                           "<b>SI-SLV-23:</b> " + feature.properties['SI-SLV-23'] + "<br>" +
+                                           "<b>EAL-23:</b> " + feature.properties['EAL-23'] + "<br>" +
+                                           "<b>SIC-23:</b> " + feature.properties['SIC-23'] + "<br>" +
+                                           "<b>EALC-23:</b> " + feature.properties['EALC-23'] + "<br>" +
+                                           "<b>Class-23:</b> " + feature.properties['Class-23'] + "<br>" +
+                                           "<b>SI-SLV-25:</b> " + feature.properties['SI-SLV-25'] + "<br>" +
+                                           "<b>EAL-25:</b> " + feature.properties['EAL-25'] + "<br>" +
+                                           "<b>SIC-25:</b> " + feature.properties['SIC-25'] + "<br>" +
+                                           "<b>EALC-25:</b> " + feature.properties['EALC-25'] + "<br>" +
+                                           "<b>Class-25:</b> " + feature.properties['Class-25'] + "<br>" +
+                                           "<b>Possible Supports:</b> " + feature.properties['Possible S'];
 
                         layer.bindPopup(popupContent);
                     }
